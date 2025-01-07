@@ -160,11 +160,12 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 
 // [BEGIN connect_to_fcm]
 - (void)connectToFcm {
+    NSLog(@"connectToFcm : %@", fcmToken);
     // Won't connect since there is no token
     if (!fcmToken) {
         return;
     }
-    [[FIRMessaging messaging] subscribeToTopic:@"ios"];
+    // [[FIRMessaging messaging] subscribeToTopic:@"ios"];
     [[FIRMessaging messaging] subscribeToTopic:@"all"];
 }
 // [END connect_to_fcm]
