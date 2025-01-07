@@ -4,7 +4,7 @@
 @interface FCMPlugin : CDVPlugin {}
 
 + (FCMPlugin *) fcmPlugin;
-- (void)notifyFCMTokenRefresh:(NSString*) token;
+// - (void)notifyFCMTokenRefresh:(NSString*) token;
 - (void)ready:(CDVInvokedUrlCommand*)command;
 - (void)hasPermission:(CDVInvokedUrlCommand*)command;
 - (void)getToken:(CDVInvokedUrlCommand*)command;
