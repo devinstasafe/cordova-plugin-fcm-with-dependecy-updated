@@ -194,11 +194,11 @@ static FCMPlugin *fcmPluginInstance;
     [self dispatchJSEvent:notificationEventName withData:JSONString];
 }
 
-// - (void)notifyFCMTokenRefresh:(NSString *)token {
-//     NSLog(@"notifyFCMTokenRefresh token: %@", token);
-//     NSString* jsToken = [NSString stringWithFormat:@"\"%@\"", token];
-//     [self dispatchJSEvent:tokenRefreshCallback withData:jsToken];
-// }
+- (void)notifyFCMTokenRefresh:(NSString *)token {
+    NSLog(@"notifyFCMTokenRefresh token: %@", token);
+    NSString* jsToken = [NSString stringWithFormat:@"\"%@\"", token];
+    [self dispatchJSEvent:tokenRefreshCallback withData:jsToken];
+}
 
 - (void)dispatchJSEvent:(NSString *)eventName withData:(NSString *)jsData {
     if(jsEventBridgeCallbackId == nil) {
