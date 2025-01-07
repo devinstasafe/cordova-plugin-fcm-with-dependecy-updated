@@ -154,7 +154,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     NSDictionary *dataDict = [NSDictionary dictionaryWithObject:deviceToken forKey:@"token"];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"FCMToken" object:nil userInfo:dataDict];
     fcmToken = deviceToken;
-    // [FCMPlugin.fcmPlugin notifyFCMTokenRefresh:deviceToken];
+    [FCMPlugin.fcmPlugin notifyFCMTokenRefresh:deviceToken];
     [self connectToFcm];
 }
 
